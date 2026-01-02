@@ -16,8 +16,8 @@
 2. Запустите сервисы: `make up`.
 3. Авторизуйте аккаунт RuTube и сохраните cookies: `make auth` (откроется окно Chromium, после логина нажмите Enter в терминале). Файл появится в `auth/rutube_cookies.json`.
 4. Подпишитесь на WebSub (однократно): `python scripts/init_websub.py`.
-5. Проверка живости: `curl http://localhost:8080/health` и `curl http://localhost:8080/api/version`.
-6. Тест ручного запуска: `curl "http://localhost:8080/api/trigger?videoId=<TEST_ID>"`. После успешного выполнения появится публикация на RuTube.
+5. Проверка живости: `curl http://localhost:18080/health` и `curl http://localhost:18080/api/version`.
+6. Тест ручного запуска: `curl "http://localhost:18080/api/trigger?videoId=<TEST_ID>"`. После успешного выполнения появится публикация на RuTube.
 
 ## Запуск без Docker
 ```bash
@@ -77,7 +77,7 @@ tests/                # pytest сценарии
 - `make worker` — локальный запуск RQ worker.
 - `make scheduler` — запуск RSS-поллера.
 - `python scripts/init_websub.py` — повторная подписка (идемпотентно).
-- `curl http://localhost:8080/api/published?limit=20` — последние публикации.
+- `curl http://localhost:18080/api/published?limit=20` — последние публикации.
 
 ## Обновление селекторов RuTube
 1. Запустите `make auth` и зайдите в RuTube Studio.

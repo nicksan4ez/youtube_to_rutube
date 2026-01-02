@@ -1,7 +1,9 @@
+.gitignore
+# Ignore data and auth directories
 /stuff
 .env
 /data*
-
+/auth/*
 # Python
 __pycache__/
 **/__pycache__/
