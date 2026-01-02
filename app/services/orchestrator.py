@@ -5,9 +5,8 @@ from pathlib import Path
 from typing import Any
 
 from redis import Redis
-from rq import Queue
+from rq import Queue, Retry
 from rq.job import Job
-from rq.retry import Retry
 
 from app.config import get_retry_policy, get_settings
 from app.db import repo
